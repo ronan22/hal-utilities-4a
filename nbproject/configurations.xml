@@ -19,7 +19,6 @@
         </df>
       </df>
       <df name="Audio-Common">
-        <in>audio-common.c</in>
         <in>filescan-utils.c</in>
         <in>wrap-json.c</in>
       </df>
@@ -35,36 +34,8 @@
         <in>ctl-timer.c</in>
       </df>
       <df name="HAL-afb">
-        <df name="HAL-interface">
-          <in>hal-interface.c</in>
-          <in>hal-volramp.c</in>
-          <in>hal-volume.c</in>
-        </df>
         <df name="HAL-plugin">
           <in>HalPlugPcm.c</in>
-        </df>
-        <df name="HAL_MOST_UNICENS">
-          <df name="ucs2-vol">
-            <df name="src">
-              <in>device_container.cpp</in>
-              <in>device_value.cpp</in>
-              <in>libmostvolume.cpp</in>
-              <in>setup.cpp</in>
-            </df>
-          </df>
-          <in>hal_most_unicens.c</in>
-          <in>wrap-json.c</in>
-          <in>wrap_unicens.c</in>
-          <in>wrap_volume.c</in>
-        </df>
-        <df name="HDA-intel">
-          <in>IntelHdaHAL.c</in>
-        </df>
-        <df name="Jabra-Solemate">
-          <in>JabraUsbHAL.c</in>
-        </df>
-        <df name="Scarlett-Focusrite">
-          <in>ScarlettUsbHAL.c</in>
         </df>
         <df name="Unicens-USB">
           <in>UnicensHAL.c</in>
@@ -93,6 +64,9 @@
         <in>Mediator.cpp</in>
         <in>libmostvolume.cpp</in>
       </df>
+      <in>hal-statics.c</in>
+      <in>hal-statics.h</in>
+      <in>hal-volume.c</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -131,7 +105,7 @@
           <buildCommand>${MAKE} -f Makefile install</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>build/CMakeFiles/feature_tests.bin</executablePath>
-          <cTool flags="0">
+          <cTool flags="2">
           </cTool>
         </makeTool>
         <preBuild>
@@ -154,7 +128,6 @@
             <pElem>Alsa-afb</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>build/Alsa-afb</pElem>
           </incDir>
@@ -168,7 +141,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Alsa-afb</pElem>
           </incDir>
           <preprocessorList>
@@ -198,7 +170,6 @@
             <pElem>Alsa-afb</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>build/Alsa-afb</pElem>
           </incDir>
@@ -211,7 +182,6 @@
             <pElem>Alsa-afb</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>build/Alsa-afb</pElem>
           </incDir>
@@ -224,19 +194,8 @@
             <pElem>Alsa-afb</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>build/Alsa-afb</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="Audio-Common/audio-common.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/Audio-Common</pElem>
           </incDir>
         </cTool>
       </item>
@@ -248,7 +207,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Audio-Common</pElem>
           </incDir>
           <preprocessorList>
@@ -273,7 +231,6 @@
       <item path="Audio-Common/wrap-json.c" ex="false" tool="0" flavor2="3">
         <cTool flags="2">
           <incDir>
-            <pElem>Audio-Common</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>build/Audio-Common</pElem>
           </incDir>
@@ -291,7 +248,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
           <preprocessorList>
@@ -322,7 +278,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
           <preprocessorList>
@@ -353,7 +308,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
           <preprocessorList>
@@ -394,7 +348,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
           <preprocessorList>
@@ -425,7 +378,6 @@
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
           <preprocessorList>
@@ -448,54 +400,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="HAL-afb/HAL-interface/hal-interface.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL-interface/hal-volramp.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL-interface/hal-volume.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
       <item path="HAL-afb/HAL-plugin/HalPlugPcm.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/HDA-intel/IntelHdaHAL.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/Jabra-Solemate/JabraUsbHAL.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/Scarlett-Focusrite/ScarlettUsbHAL.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
         <cTool flags="2">
         </cTool>
       </item>
@@ -558,9 +463,19 @@
       </item>
       <item path="MostVolume/libmostvolume.cpp" ex="false" tool="1" flavor2="4">
       </item>
+      <item path="afb-utilities/filescan-utils.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="afb-utilities/wrap-json.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
       <folder path="0/Alsa-Plugin">
         <cTool>
           <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/p11-kit-1</pElem>
@@ -589,15 +504,32 @@
           </preprocessorList>
         </cTool>
       </folder>
+      <folder path="0/Alsa-afb">
+        <cTool>
+          <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/Audio-Common">
+        <cTool>
+          <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
+          </incDir>
+        </cTool>
+      </folder>
       <folder path="0/Common">
         <cTool>
           <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
             <pElem>build/HAL-afb/HAL-plugin</pElem>
             <pElem>/usr/include/alsa</pElem>
@@ -623,16 +555,31 @@
           </preprocessorList>
         </cTool>
       </folder>
+      <folder path="0/Controller-afb">
+        <cTool>
+          <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
+          </incDir>
+        </cTool>
+      </folder>
       <folder path="0/HAL-afb">
         <cTool>
           <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
+            <pElem>build/Controller-afb</pElem>
+            <pElem>build/HAL-afb/HAL-plugin</pElem>
+            <pElem>../../../opt/include/afb</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>CONTROL_CDEV_RX="/dev/inic-usb-crx"</Elem>
+            <Elem>CONTROL_CDEV_TX="/dev/inic-usb-ctx"</Elem>
             <Elem>CONTROL_CONFIG_PATH="/home/fulup/Workspace/AGL-AppFW/audio-bindings-dev/conf.d/project/config.d:/usr/local/controller/config.d"</Elem>
             <Elem>CONTROL_CONFIG_POST="control"</Elem>
             <Elem>CONTROL_CONFIG_PRE="onload"</Elem>
@@ -645,93 +592,35 @@
             <Elem>MAX_LINEAR_DB_SCALE=24</Elem>
             <Elem>MAX_SND_CARD=16</Elem>
             <Elem>TLV_BYTE_SIZE=256</Elem>
-          </preprocessorList>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/HAL-interface">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/HAL-plugin">
-        <cTool>
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>build/Controller-afb</pElem>
-            <pElem>build/HAL-afb/HAL-plugin</pElem>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL-plugin</pElem>
-          </incDir>
-          <preprocessorList>
-            <Elem>CONTROL_CDEV_RX="/dev/inic-usb-crx"</Elem>
-            <Elem>CONTROL_CDEV_TX="/dev/inic-usb-ctx"</Elem>
             <Elem>audio_plugin_sample_EXPORTS</Elem>
             <Elem>control_afb_EXPORTS</Elem>
           </preprocessorList>
         </cTool>
       </folder>
-      <folder path="0/HAL-afb/HDA-intel">
+      <folder path="0/HAL-afb/HAL-plugin">
         <cTool>
           <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HDA-intel</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/HDA-intel</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/Jabra-Solemate">
-        <cTool>
-          <incDir>
-            <pElem>HAL-afb/Jabra-Solemate</pElem>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/Jabra-Solemate</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/Scarlett-Focusrite">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/Scarlett-Focusrite</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/Scarlett-Focusrite</pElem>
+            <pElem>HAL-afb/HAL-plugin</pElem>
           </incDir>
         </cTool>
       </folder>
       <folder path="0/HAL-afb/Unicens-USB">
         <cTool>
           <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>build/Controller-afb</pElem>
-            <pElem>build/HAL-afb/HAL-plugin</pElem>
-            <pElem>../../../opt/include/afb</pElem>
             <pElem>HAL-afb/Unicens-USB</pElem>
           </incDir>
-          <preprocessorList>
-            <Elem>CONTROL_CDEV_RX="/dev/inic-usb-crx"</Elem>
-            <Elem>CONTROL_CDEV_TX="/dev/inic-usb-ctx"</Elem>
-            <Elem>audio_plugin_sample_EXPORTS</Elem>
-            <Elem>control_afb_EXPORTS</Elem>
-          </preprocessorList>
         </cTool>
       </folder>
       <folder path="0/HighLevel-afb">
         <cTool>
           <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
             <pElem>build/HAL-afb/HAL-plugin</pElem>
             <pElem>../../../opt/include/afb</pElem>
@@ -760,12 +649,13 @@
       <folder path="0/MostVolume">
         <cTool>
           <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
             <pElem>../../../opt/include</pElem>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/p11-kit-1</pElem>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
-            <pElem>Audio-Common</pElem>
             <pElem>build/Controller-afb</pElem>
             <pElem>build/HAL-afb/HAL-plugin</pElem>
           </incDir>
@@ -787,6 +677,52 @@
           </preprocessorList>
         </cTool>
       </folder>
+      <folder path="0/afb-utilities">
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/json-c</pElem>
+            <pElem>../../../opt/include</pElem>
+            <pElem>/usr/include/p11-kit-1</pElem>
+            <pElem>../../../opt/include/alsa</pElem>
+            <pElem>afb-utilities</pElem>
+            <pElem>build/afb-utilities</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CONTROL_MAXPATH_LEN=255</Elem>
+            <Elem>MAX_LINEAR_DB_SCALE=24</Elem>
+            <Elem>MAX_SND_CARD=16</Elem>
+            <Elem>NATIVE_LINUX</Elem>
+            <Elem>TLV_BYTE_SIZE=256</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <item path="hal-statics.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <incDir>
+            <pElem>Audio-Common</pElem>
+            <pElem>build/HAL-afb/HAL-interface</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="hal-volume.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/include/json-c</pElem>
+            <pElem>../../../opt/include</pElem>
+            <pElem>/usr/include/p11-kit-1</pElem>
+            <pElem>../../../opt/include/alsa</pElem>
+            <pElem>hal-utilities</pElem>
+            <pElem>build/hal-utilities</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CONTROL_MAXPATH_LEN=255</Elem>
+            <Elem>MAX_LINEAR_DB_SCALE=24</Elem>
+            <Elem>MAX_SND_CARD=16</Elem>
+            <Elem>NATIVE_LINUX</Elem>
+            <Elem>TLV_BYTE_SIZE=256</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
     </conf>
     <conf name="Local_Alias" type="0">
       <toolsSet>
@@ -796,10 +732,9 @@
       </toolsSet>
       <flagsDictionary>
         <element flagsID="0" commonFlags="-g -fPIC -fPIC -g"/>
-        <element flagsID="1" commonFlags="-mtune=generic -march=x86-64 -fPIC"/>
-        <element flagsID="2" commonFlags="-mtune=generic -march=x86-64 -g -fPIC"/>
-        <element flagsID="3" commonFlags="-mtune=generic -march=x86-64 -g -g -fPIC"/>
-        <element flagsID="4"
+        <element flagsID="1" commonFlags="-mtune=generic -march=x86-64 -g -fPIC"/>
+        <element flagsID="2" commonFlags="-mtune=generic -march=x86-64 -g -g -fPIC"/>
+        <element flagsID="3"
                  commonFlags="-mtune=generic -march=x86-64 -g -ggdb -g -ggdb -fPIC"/>
       </flagsDictionary>
       <codeAssistance>
@@ -811,8 +746,47 @@
           <buildCommand>${MAKE} -f Makefile install</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>build/CMakeFiles/feature_tests.bin</executablePath>
-          <cTool flags="-g -fPIC -fPIC">
+          <cTool flags="1">
+            <incDir>
+              <pElem>Audio-Common</pElem>
+              <pElem>../../../opt/include</pElem>
+              <pElem>build/HAL-afb/HAL-interface</pElem>
+              <pElem>Audio-Common</pElem>
+              <pElem>build/HAL-afb/HAL-interface</pElem>
+              <pElem>build/HAL-afb/HAL-interface</pElem>
+              <pElem>../../../opt/include/afb</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>../../../opt/include/alsa</pElem>
+              <pElem>/usr/include/json-c</pElem>
+              <pElem>Audio-Common</pElem>
+              <pElem>HAL-afb/HAL-interface</pElem>
+              <pElem>../../../opt/include</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>/usr/include/json-c</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>../../../opt/include/afb</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>/usr/include/json-c</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>../../../opt/include/afb</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+            </incDir>
           </cTool>
+          <ccTool flags="-mtune=generic -march=x86-64 -fPIC">
+            <incDir>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+            </incDir>
+          </ccTool>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>build</preBuildCommandWorkingDir>
@@ -823,11 +797,11 @@
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-AddCtl.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -838,14 +812,14 @@
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-ApiHat.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>build/Alsa-afb</pElem>
           </incDir>
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-RegEvt.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -856,7 +830,7 @@
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-SetGet.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -867,7 +841,7 @@
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-Ucm.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -877,18 +851,8 @@
           </incDir>
         </cTool>
       </item>
-      <item path="Audio-Common/audio-common.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/Audio-Common</pElem>
-          </incDir>
-        </cTool>
-      </item>
       <item path="Audio-Common/filescan-utils.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/afb</pElem>
             <pElem>Audio-Common</pElem>
@@ -898,7 +862,7 @@
         </cTool>
       </item>
       <item path="Audio-Common/wrap-json.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>Audio-Common</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -911,14 +875,14 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-binding.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>build/Controller-afb</pElem>
           </incDir>
         </cTool>
       </item>
       <item path="Controller-afb/ctl-dispatch.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
@@ -929,7 +893,7 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-lua.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
@@ -940,7 +904,7 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-misc.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>build/Controller-afb</pElem>
@@ -948,7 +912,7 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-plugin-sample.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
@@ -957,166 +921,19 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-timer.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
         </cTool>
       </item>
-      <item path="HAL-afb/HAL-interface/hal-interface.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>../../../opt/include</pElem>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL-interface/hal-volramp.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL-interface/hal-volume.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
       <item path="HAL-afb/HAL-plugin/HalPlugPcm.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/hal_most_unicens.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>../../../opt/include/alsa</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>../../../opt/include</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/device_container.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/device_value.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/libmostvolume.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/setup.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/wrap-json.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/wrap_unicens.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/wrap_volume.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HDA-intel/IntelHdaHAL.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/Jabra-Solemate/JabraUsbHAL.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/Scarlett-Focusrite/ScarlettUsbHAL.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="HAL-afb/Unicens-USB/UnicensHAL.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="4">
+        <cTool flags="3">
           <incDir>
             <pElem>Shared-Interface</pElem>
             <pElem>HAL-afb/HAL-interface</pElem>
@@ -1125,7 +942,7 @@
         </cTool>
       </item>
       <item path="HAL-afb/Unicens-USB/UnicensVol.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="4">
+        <cTool flags="3">
           <incDir>
             <pElem>HAL-afb/HAL-interface</pElem>
             <pElem>build/HAL-afb/Unicens-USB</pElem>
@@ -1133,11 +950,11 @@
         </cTool>
       </item>
       <item path="HighLevel-afb/HighLevelApiConf.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="3">
+        <cTool flags="2">
         </cTool>
       </item>
       <item path="HighLevel-afb/HighLevelBinding.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="3">
+        <cTool flags="2">
         </cTool>
       </item>
       <item path="MostVolume/DeviceContainer.cpp" ex="false" tool="1" flavor2="4">
@@ -1175,7 +992,7 @@
       <item path="MostVolume/libmostvolume.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="afb-utilities/filescan-utils.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/afb</pElem>
             <pElem>afb-utilities</pElem>
@@ -1185,7 +1002,7 @@
         </cTool>
       </item>
       <item path="afb-utilities/wrap-json.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>afb-utilities</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1299,14 +1116,6 @@
           </preprocessorList>
         </ccTool>
       </folder>
-      <folder path="0/HAL-afb/HAL-interface">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </folder>
       <folder path="0/HAL-afb/HAL-plugin">
         <cTool>
           <incDir>
@@ -1331,39 +1140,6 @@
             <Elem>audio_plugin_sample_EXPORTS</Elem>
             <Elem>control_afb_EXPORTS</Elem>
           </preprocessorList>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/HDA-intel">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HDA-intel</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/HDA-intel</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/Jabra-Solemate">
-        <cTool>
-          <incDir>
-            <pElem>HAL-afb/Jabra-Solemate</pElem>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/Jabra-Solemate</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/Scarlett-Focusrite">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/Scarlett-Focusrite</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/Scarlett-Focusrite</pElem>
-          </incDir>
         </cTool>
       </folder>
       <folder path="0/HAL-afb/Unicens-USB">
@@ -1456,6 +1232,10 @@
           </preprocessorList>
         </cTool>
       </folder>
+      <item path="hal-statics.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="hal-statics.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
     <conf name="Local-Ctl" type="0">
       <toolsSet>
@@ -1465,10 +1245,9 @@
       </toolsSet>
       <flagsDictionary>
         <element flagsID="0" commonFlags="-g -fPIC -fPIC -g"/>
-        <element flagsID="1" commonFlags="-mtune=generic -march=x86-64 -fPIC"/>
-        <element flagsID="2" commonFlags="-mtune=generic -march=x86-64 -g -fPIC"/>
-        <element flagsID="3" commonFlags="-mtune=generic -march=x86-64 -g -g -fPIC"/>
-        <element flagsID="4"
+        <element flagsID="1" commonFlags="-mtune=generic -march=x86-64 -g -fPIC"/>
+        <element flagsID="2" commonFlags="-mtune=generic -march=x86-64 -g -g -fPIC"/>
+        <element flagsID="3"
                  commonFlags="-mtune=generic -march=x86-64 -g -ggdb -g -ggdb -fPIC"/>
       </flagsDictionary>
       <codeAssistance>
@@ -1480,8 +1259,47 @@
           <buildCommand>${MAKE} -f Makefile populate</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>build/CMakeFiles/feature_tests.bin</executablePath>
-          <cTool flags="-g -fPIC -fPIC">
+          <cTool flags="1">
+            <incDir>
+              <pElem>Audio-Common</pElem>
+              <pElem>../../../opt/include</pElem>
+              <pElem>build/HAL-afb/HAL-interface</pElem>
+              <pElem>Audio-Common</pElem>
+              <pElem>build/HAL-afb/HAL-interface</pElem>
+              <pElem>build/HAL-afb/HAL-interface</pElem>
+              <pElem>../../../opt/include/afb</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>../../../opt/include/alsa</pElem>
+              <pElem>/usr/include/json-c</pElem>
+              <pElem>Audio-Common</pElem>
+              <pElem>HAL-afb/HAL-interface</pElem>
+              <pElem>../../../opt/include</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>/usr/include/json-c</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>../../../opt/include/afb</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>/usr/include/json-c</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>../../../opt/include/afb</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
+            </incDir>
           </cTool>
+          <ccTool flags="-mtune=generic -march=x86-64 -fPIC">
+            <incDir>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
+              <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
+            </incDir>
+          </ccTool>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>build</preBuildCommandWorkingDir>
@@ -1492,11 +1310,11 @@
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-AddCtl.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1507,14 +1325,14 @@
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-ApiHat.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>build/Alsa-afb</pElem>
           </incDir>
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-RegEvt.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1525,7 +1343,7 @@
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-SetGet.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1536,7 +1354,7 @@
         </cTool>
       </item>
       <item path="Alsa-afb/Alsa-Ucm.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/alsa</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1546,18 +1364,8 @@
           </incDir>
         </cTool>
       </item>
-      <item path="Audio-Common/audio-common.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/Audio-Common</pElem>
-          </incDir>
-        </cTool>
-      </item>
       <item path="Audio-Common/filescan-utils.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/afb</pElem>
             <pElem>Audio-Common</pElem>
@@ -1567,7 +1375,7 @@
         </cTool>
       </item>
       <item path="Audio-Common/wrap-json.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>Audio-Common</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1580,14 +1388,14 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-binding.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>build/Controller-afb</pElem>
           </incDir>
         </cTool>
       </item>
       <item path="Controller-afb/ctl-dispatch.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
@@ -1598,7 +1406,7 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-lua.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
@@ -1609,7 +1417,7 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-misc.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>build/Controller-afb</pElem>
@@ -1617,7 +1425,7 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-plugin-sample.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>/usr/include/json-c</pElem>
             <pElem>/usr/include/lua5.3</pElem>
@@ -1626,166 +1434,19 @@
         </cTool>
       </item>
       <item path="Controller-afb/ctl-timer.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include</pElem>
             <pElem>build/Controller-afb</pElem>
           </incDir>
         </cTool>
       </item>
-      <item path="HAL-afb/HAL-interface/hal-interface.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>../../../opt/include</pElem>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL-interface/hal-volramp.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>Audio-Common</pElem>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL-interface/hal-volume.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>build/HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </item>
       <item path="HAL-afb/HAL-plugin/HalPlugPcm.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/hal_most_unicens.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>../../../opt/include/alsa</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>../../../opt/include</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/device_container.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/device_value.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/libmostvolume.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src/setup.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool flags="1">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/src</pElem>
-          </incDir>
-        </ccTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/wrap-json.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/wrap_unicens.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>/usr/include/json-c</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HAL_MOST_UNICENS/wrap_volume.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS</pElem>
-            <pElem>HAL-afb/HAL_MOST_UNICENS/ucs2-vol/inc</pElem>
-            <pElem>build/HAL-afb/HAL_MOST_UNICENS</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="HAL-afb/HDA-intel/IntelHdaHAL.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/Jabra-Solemate/JabraUsbHAL.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
-        </cTool>
-      </item>
-      <item path="HAL-afb/Scarlett-Focusrite/ScarlettUsbHAL.c"
-            ex="false"
-            tool="0"
-            flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="HAL-afb/Unicens-USB/UnicensHAL.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="4">
+        <cTool flags="3">
           <incDir>
             <pElem>Shared-Interface</pElem>
             <pElem>HAL-afb/HAL-interface</pElem>
@@ -1794,7 +1455,7 @@
         </cTool>
       </item>
       <item path="HAL-afb/Unicens-USB/UnicensVol.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="4">
+        <cTool flags="3">
           <incDir>
             <pElem>HAL-afb/HAL-interface</pElem>
             <pElem>build/HAL-afb/Unicens-USB</pElem>
@@ -1802,11 +1463,11 @@
         </cTool>
       </item>
       <item path="HighLevel-afb/HighLevelApiConf.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="3">
+        <cTool flags="2">
         </cTool>
       </item>
       <item path="HighLevel-afb/HighLevelBinding.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="3">
+        <cTool flags="2">
         </cTool>
       </item>
       <item path="MostVolume/DeviceContainer.cpp" ex="false" tool="1" flavor2="4">
@@ -1844,7 +1505,7 @@
       <item path="MostVolume/libmostvolume.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="afb-utilities/filescan-utils.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>../../../opt/include/afb</pElem>
             <pElem>afb-utilities</pElem>
@@ -1854,7 +1515,7 @@
         </cTool>
       </item>
       <item path="afb-utilities/wrap-json.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="2">
+        <cTool flags="1">
           <incDir>
             <pElem>afb-utilities</pElem>
             <pElem>/usr/include/json-c</pElem>
@@ -1968,14 +1629,6 @@
           </preprocessorList>
         </ccTool>
       </folder>
-      <folder path="0/HAL-afb/HAL-interface">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-          </incDir>
-        </cTool>
-      </folder>
       <folder path="0/HAL-afb/HAL-plugin">
         <cTool>
           <incDir>
@@ -2000,39 +1653,6 @@
             <Elem>audio_plugin_sample_EXPORTS</Elem>
             <Elem>control_afb_EXPORTS</Elem>
           </preprocessorList>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/HDA-intel">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/HDA-intel</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/HDA-intel</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/Jabra-Solemate">
-        <cTool>
-          <incDir>
-            <pElem>HAL-afb/Jabra-Solemate</pElem>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/Jabra-Solemate</pElem>
-          </incDir>
-        </cTool>
-      </folder>
-      <folder path="0/HAL-afb/Scarlett-Focusrite">
-        <cTool>
-          <incDir>
-            <pElem>../../../opt/include/afb</pElem>
-            <pElem>HAL-afb/Scarlett-Focusrite</pElem>
-            <pElem>Audio-Common</pElem>
-            <pElem>HAL-afb/HAL-interface</pElem>
-            <pElem>build/HAL-afb/Scarlett-Focusrite</pElem>
-          </incDir>
         </cTool>
       </folder>
       <folder path="0/HAL-afb/Unicens-USB">
@@ -2125,6 +1745,10 @@
           </preprocessorList>
         </cTool>
       </folder>
+      <item path="hal-statics.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="hal-statics.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -19,26 +19,16 @@
  *   http://www.tldp.org/HOWTO/Alsa-sound-6.html
  */
 
-#ifndef AUDIO_INTERF_H
-#define AUDIO_INTERF_H
+#ifndef HAL_STATIC_H
+#define HAL_STATIC_H
 
-#define AFB_BINDING_VERSION 2
-#include <afb/afb-binding.h>
-#include <json-c/json.h>
-#include <filescan-utils.h>
-#include <wrap-json.h>
-
-// Waiting for official macro from José
-#define AFB_GET_VERBOSITY afb_get_verbosity_v2()
+// Soft control have dynamically allocated numid
+#define CTL_AUTO -1
 
 #ifndef PUBLIC
   #define PUBLIC
 #endif
 #define STATIC static
-
-
-// Soft control have dynamically allocated numid
-#define CTL_AUTO -1
 
 typedef enum {
   QUERY_QUIET   =0,
@@ -107,9 +97,8 @@ typedef enum {
 
 } halRampEnumT;
 
-PUBLIC void pingtest(struct afb_req request);
 extern const char *halVolRampModes[];
 extern const char *halCtlsLabels[];
 
-#endif /* AUDIO_INTERF_H */
+#endif /* HAL_STATIC_H */
 

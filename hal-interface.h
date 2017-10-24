@@ -15,14 +15,19 @@
  * limitations under the License.
  */
 
-#ifndef SHAREHALLIB_H
-#define SHAREHALLIB_H
+#ifndef HAL_INTERFACE_H
+#define HAL_INTERFACE_H
 
 #include <stdio.h>
 #include <alsa/asoundlib.h>
 
-#include "audio-common.h"
+#define AFB_BINDING_VERSION 2
+#include <afb/afb-binding.h>
+
+#include "hal-statics.h"
 #include <systemd/sd-event.h>
+#include <json-c/json.h>
+
 
 typedef enum {
     ACTION_SET,
@@ -102,5 +107,5 @@ PUBLIC void volumeRamp(halCtlsTagT halTag, alsaHalCtlMapT *control, void* handle
 PUBLIC json_object *volumeNormalise(ActionSetGetT action, const alsaHalCtlMapT *halCtls, json_object *valuesJ);
 
 
-#endif /* SHAREHALLIB_H */
+#endif /* HAL_INTERFACE_H */
 

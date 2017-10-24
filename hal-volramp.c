@@ -24,6 +24,7 @@ STATIC int RampTimerCB(sd_event_source* source, uint64_t timer, void* handle) {
     int err;
     uint64_t usec;
 
+    
     // RampDown
     if (volRamp->current > volRamp->target) {
         volRamp->current = volRamp->current - volRamp->stepDown;
@@ -41,13 +42,16 @@ STATIC int RampTimerCB(sd_event_source* source, uint64_t timer, void* handle) {
     if (err) goto OnErrorExit;
 
     // we reach target stop volram event
-    if (volRamp->current == volRamp->target) sd_event_source_unref(source);
-    else {
-        // otherwise validate timer for a new run
-        sd_event_now(afb_daemon_get_event_loop(), CLOCK_MONOTONIC, &usec);
-        sd_event_source_set_enabled(source, SD_EVENT_ONESHOT);
-        err = sd_event_source_set_time(source, usec + volRamp->delay);
+    if (volRamp->current == volRamp->target) {
+        AFB_NOTICE("RampTimerCB Done tag=%d target=%d", Master_Playback_Volume, volRamp->current);
+        sd_event_source_unref(source);
+        return 0;
     }
+
+    // otherwise validate timer for a new run
+    sd_event_now(afb_daemon_get_event_loop(), CLOCK_MONOTONIC, &usec);
+    sd_event_source_set_enabled(source, SD_EVENT_ONESHOT);
+    err = sd_event_source_set_time(source, usec + volRamp->delay);
 
     return 0;
 

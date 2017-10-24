@@ -16,7 +16,8 @@
  *
  */
 #define _GNU_SOURCE  // needed for vasprintf
-#include "audio-common.h"
+#include "hal-statics.h"
+#include <stdio.h>
 
 PUBLIC const char *halCtlsLabels[] = {
 
@@ -58,8 +59,3 @@ PUBLIC const char *halVolRampModes[] = {
    [EndHalVolMod] = NULL,
 
 };
-
-PUBLIC void pingtest(struct afb_req request) {
-    json_object *query = afb_req_json(request);
-    afb_req_success(request, query, NULL);
-}

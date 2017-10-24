@@ -29,6 +29,12 @@ alsaHalSndCardT *halSndCard;
 // Force specific HAL to depend on ShareHalLib
 PUBLIC char* SharedHalLibVersion = "1.0";
 
+
+STATIC void pingtest(struct afb_req request) {
+    json_object *query = afb_req_json(request);
+    afb_req_success(request, query, NULL);
+}
+
 // Subscribe to AudioBinding events
 
 STATIC void halSubscribe(afb_req request) {
